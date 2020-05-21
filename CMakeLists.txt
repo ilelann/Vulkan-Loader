@@ -131,7 +131,7 @@ if(UNIX AND NOT APPLE) # i.e.: Linux
     endif()
 
     if(BUILD_WSI_WAYLAND_SUPPORT)
-        find_package(Wayland REQUIRED)
+        find_package(WAYLAND REQUIRED COMPONENTS CLIENT SERVER EGL CURSOR)
         include_directories(${WAYLAND_CLIENT_INCLUDE_DIR})
     endif()
 endif()
